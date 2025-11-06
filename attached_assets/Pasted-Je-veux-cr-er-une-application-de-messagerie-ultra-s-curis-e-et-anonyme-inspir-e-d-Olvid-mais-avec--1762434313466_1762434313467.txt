@@ -1,0 +1,54 @@
+Je veux créer une application de messagerie ultra sécurisée et anonyme, inspirée d’Olvid, mais avec ma propre identité de marque.
+L’application doit fonctionner sans numéro de téléphone.
+L’utilisateur s’authentifie uniquement via e-mail (avec validation sécurisée).
+🧩 Fonctionnalités principales :
+Inscription & connexion
+Authentification par e-mail uniquement (avec code de vérification envoyé par mail).
+Aucune donnée personnelle ni numéro de téléphone.
+Chiffrement des identifiants utilisateurs (utiliser AES-256 ou RSA).
+Profil utilisateur minimal
+Pseudo, photo de profil facultative, statut.
+Aucune donnée publique consultable sans lien direct.
+Messagerie chiffrée de bout en bout (E2EE)
+Messages texte instantanés.
+Envoi de fichiers, images et audios chiffrés.
+Messages temporaires (auto-suppression après X temps).
+Système de suppression totale des messages (effacement des traces locales et serveur).
+Appels audio et vidéo sécurisés
+Utiliser WebRTC pour les appels pair-à-pair (P2P).
+Aucun serveur d’intermédiaire conservant les métadonnées d’appel.
+Appels chiffrés de bout en bout.
+Messages vocaux
+Enregistrement et envoi via micro.
+Lecture dans l’app, chiffrée et éphémère.
+Système d’ajout de contacts
+Par QR code ou lien d’invitation chiffré.
+Pas de recherche par nom, e-mail ou numéro.
+Sécurité et anonymat
+Chiffrement bout à bout avec Signal Protocol ou libsodium.
+Stockage local chiffré sur l’appareil.
+Aucun traçage, aucune pub, aucun cookie.
+Pas de logs serveurs d’activité.
+Option “mode furtif” (empêche captures d’écran, notifications floutées).
+Backend
+API sécurisée avec Node.js + Express + MongoDB (ou Supabase pour gestion auth mail).
+Hébergement possible sur Railway.app, Vercel, ou Replit DB pour prototypage.
+Gestion du chiffrement côté client avant tout envoi serveur.
+Interface
+Design minimaliste, sombre, épuré.
+Style moderne façon Signal / Olvid.
+Réactif et fluide.
+Évolutions futures
+Intégrer authentification 2FA via mail ou app tierce.
+Messagerie éphémère “burn after read”.
+Système de salon privé ou groupe sécurisé.
+Objectif du prompt :
+Générer une application complète (frontend + backend) qui implémente toutes les bases ci-dessus.
+Le code doit être documenté, modulaire et open source friendly.
+Les priorités sont la discrétion, la confidentialité, et la simplicité.
+Stack suggérée :
+Frontend : React Native (Expo), Tailwind, Zustand ou Redux
+Backend : Node.js + Express + MongoDB (ou Supabase)
+Sécurité : libsodium / Signal Protocol / bcrypt
+Appels audio/vidéo : WebRTC
+Notifications : Firebase Cloud Messaging (FCM) mais sans traçage de données
